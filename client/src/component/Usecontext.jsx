@@ -21,7 +21,7 @@ function Usecontext(data) {
 
     const [productlist, setProductlist] = useState([])
     useEffect(()=>{
-    axios.get("http://localhost:5000/readallproduct").then(async (data) => {  // get all product details from database
+    axios.get("https://e-commers-wpco.onrender.com/readallproduct").then(async (data) => {  // get all product details from database
         setProductlist(data.data)
         // console.log(data.data[0]._id)
     }).catch(()=>{

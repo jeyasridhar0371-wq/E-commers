@@ -28,7 +28,7 @@ function Myorders(){
         try{
 
             const res = await axios.get(
-                "http://localhost:5000/readorders",
+                "https://e-commers-wpco.onrender.com/readorders",
                 {
                     params:{
                         userid:user.uid

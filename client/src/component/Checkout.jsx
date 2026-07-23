@@ -40,7 +40,7 @@ function Checkout() {
         try {
 
             const res = await axios.get(
-                "http://localhost:5000/readcart"
+                "https://e-commers-wpco.onrender.com/readcart"
             );
 
 
@@ -128,13 +128,13 @@ function Checkout() {
 
 
             await axios.post(
-                "http://localhost:5000/addorder",
+                "https://e-commers-wpco.onrender.com/addorder",
                 orderData
             );
 
 
             await axios.delete(
-                "http://localhost:5000/clearcart",
+                "https://e-commers-wpco.onrender.com/clearcart",
                 {
                     params: {
                         userid: user.uid

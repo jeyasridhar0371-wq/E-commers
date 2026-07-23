@@ -28,7 +28,7 @@ function Shoppingcart() {
 
         try {
 
-            const res = await axios.get("http://localhost:5000/readcart");
+            const res = await axios.get("https://e-commers-wpco.onrender.com/readcart");
 
             const myCart = res.data.filter(
                 (item) => item.userid === user.uid
@@ -64,7 +64,7 @@ function Shoppingcart() {
         const user = auth.currentUser;
 
         await axios.put(
-            "http://localhost:5000/increasequantity",
+            "https://e-commers-wpco.onrender.com/increasequantity",
             {
                 productid: product._id,
                 userid: user.uid
@@ -80,7 +80,7 @@ function Shoppingcart() {
         const user = auth.currentUser;
 
         await axios.put(
-            "http://localhost:5000/decreasequantity",
+            "https://e-commers-wpco.onrender.com/decreasequantity",
             {
                 productid: product._id,
                 userid: user.uid
@@ -98,7 +98,7 @@ function Shoppingcart() {
         try {
 
             await axios.delete(
-                "http://localhost:5000/removecart",
+                "https://e-commers-wpco.onrender.com/removecart",
                 {
                     params: {
                         productid: product._id,

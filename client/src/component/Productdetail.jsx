@@ -54,7 +54,7 @@ function Productdetail() {
         try {
 
             const res = await axios.get(
-                "http://localhost:5000/checkcart",
+                "https://e-commers-wpco.onrender.com/checkcart",
                 {
                     params: {
                         productid: product._id,
@@ -83,7 +83,7 @@ function Productdetail() {
         try {
 
             await axios.delete(
-                "http://localhost:5000/removecart",
+                "https://e-commers-wpco.onrender.com/removecart",
                 {
                     params: {
                         productid: product._id,
@@ -111,7 +111,7 @@ function Productdetail() {
 
         try {
 
-            await axios.post("http://localhost:5000/addcart", {
+            await axios.post("https://e-commers-wpco.onrender.com/addcart", {
                 productid: product._id,
                 userid: user.uid
             });

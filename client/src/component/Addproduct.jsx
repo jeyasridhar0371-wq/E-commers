@@ -12,7 +12,7 @@ function Addproduct(){
     const [image,setImage] = useState("watch.jpg")
 
     function handleAdd(){
-        axios.post("http://localhost:5000/ctrateproduct",{name:name,description:description,price:price,category:category,image:image}).then((data)=>{
+        axios.post("https://e-commers-wpco.onrender.com/ctrateproduct",{name:name,description:description,price:price,category:category,image:image}).then((data)=>{
             console.log("Success to create product")
         }).catch(()=>{
             console.log("Failed to create product")

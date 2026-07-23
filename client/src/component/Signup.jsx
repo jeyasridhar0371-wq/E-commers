@@ -33,7 +33,7 @@ function Signup() {
             console.log("Signup success.")
             auth.onAuthStateChanged((user) => {
                 // console.log(user.uid)
-                axios.post("http://localhost:5000/storeuser", { firebase_uid: user.uid, role: roll }).then(() => {
+                axios.post("https://e-commers-wpco.onrender.com/storeuser", { firebase_uid: user.uid, role: roll }).then(() => {
                     console.log("user stored in mongoDB.")
                     navigate("/login")
                 }).catch(() => {
@@ -59,7 +59,7 @@ function Signup() {
             const user = result.user;
 
             const res = await axios.get(
-                "http://localhost:5000/readuser",
+                "https://e-commers-wpco.onrender.com/readuser",
                 {
                     params: {
                         firebase_uid: user.uid
@@ -70,7 +70,7 @@ function Signup() {
             if (!res.data) {
 
                 await axios.post(
-                    "http://localhost:5000/storeuser",
+                    "https://e-commers-wpco.onrender.com/storeuser",
                     {
                         firebase_uid: user.uid,
                         role: false

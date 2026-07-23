@@ -48,7 +48,7 @@ function Login() {
             // Check user exists in MongoDB
 
             const res = await axios.get(
-                "http://localhost:5000/readuser",
+                "https://e-commers-wpco.onrender.com/readuser",
                 {
                     params: {
                         firebase_uid: user.uid
@@ -61,7 +61,7 @@ function Login() {
             if (!res.data) {
 
                 await axios.post(
-                    "http://localhost:5000/storeuser",
+                    "https://e-commers-wpco.onrender.com/storeuser",
                     {
                         firebase_uid: user.uid,
                         role: false
