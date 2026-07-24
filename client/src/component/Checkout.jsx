@@ -143,7 +143,7 @@ function Checkout() {
             );
 
 
-            navigate("/orderconfirmation", {state: orderRes.data});
+            navigate("/orderconfirmation", {state: res.data});
 
 
         }
